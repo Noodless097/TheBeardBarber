@@ -88,10 +88,28 @@
       <label for="comments">Comentarios adicionales:</label>
       <textarea id="comments" name="comments" rows="4"></textarea> -->
 
-      <button id="reservar">Reservar cita</button>
-        <a href="" id="reservar"></a>
+      <!-- <button id="reservar">Reservar cita</button>
+        <a href="https://calendar.app.google/XKcLehDnPP7ee4w98"></a>
         <script src="https://apis.google.com/js/api.js"></script>
-        <script src="app.js"></script>
+        <script src="app.js"></script> -->
+        <!-- Google Calendar Appointment Scheduling begin -->
+<link href="https://calendar.google.com/calendar/scheduling-button-script.css" rel="stylesheet">
+<script src="https://calendar.google.com/calendar/scheduling-button-script.js" async></script>
+<script>
+(function() {
+  var target = document.currentScript;
+  window.addEventListener('load', function() {
+    calendar.schedulingButton.load({
+      url: 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ0b9uhnT5t3-G-Hp73Vqy1wH-ux5FpYZSXcT7gFNcFn2MIC-KMC2PpIZ9xz8nD-OYaJ7v10EfkX?gv=true',
+      color: '#039BE5',
+      label: 'Reservar una cita',
+      target,
+    });
+  });
+})();
+</script>
+<!-- end Google Calendar Appointment Scheduling -->
+
     </form>
     
   </div>
