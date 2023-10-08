@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Agrega esta línea */
+    
+  }
+  header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    position:fixed
+    
+  }
+  .logo {
+    float: left; 
+    margin-right: 20px; 
+    position: absolute;
+    top: 50%; /* Centra verticalmente */
+    left: 100px;
+    transform: translateY(-50%); /* Centra verticalmente el logo */
+    
+  }
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    text-align: center;
+    ;
+  }
+  h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  .booking-form {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 2rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  label {
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+  
+  select,
+  textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+  }
+  button {
+    background-color: #333;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+
+
+/* Estilos para el video */
+.video-container {
+ float: left;
+ margin-bottom: auto;
+ margin-top:auto;
+ margin-left: 20%
+}
+
+
+
+h3 {
+  clear;
+  font-size: 32px;
+  max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    color:#ccc;
+    text-align: center;
+}
+
+p {
+  font-size: 20px;
+  max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem; 
+    padding-bottom: 5%;
+    text-align: center;
+    color:#ccc
+}
+
+h2{
+  clear: both;
+  max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    text-align: center;
+    color:#fff
+    
+}
+hr{
+  clear: both;
+  
+}
+
+ 
+
+.iframe-container {
+  text-align: center;
+}
+
+.lista-imagenes {
+    text-align: center;
+    justify-content: center; /* Centra horizontalmente la lista en escritorio */
+    margin-left: auto; /* Elimina el margen izquierdo en dispositivos de escritorio */
+    margin-right: auto; /* Elimina el margen derecho en dispositivos de escritorio */
+  }
+
+  .image-scroll-container img {
+    display: inline-block;
+    max-width: 100%;
+    height: auto;
+    justify-content: center;
+  }
+
+  .image-scroll-container {
+    overflow-x: auto;
+    white-space: nowrap;
+    max-width: 100%;
+    display: flex; /* Añade un display:flex para que los elementos se ajusten al contenedor */
+    align-items: center; /* Centra verticalmente los elementos */
+    justify-content: flex-start;
+    overflow-y: hidden;
+  }
+
+/* Media query para estilos en dispositivos de escritorio */
+@media (min-width: 769px) {
+  .section {
+    background-attachment: scroll; /* Fondo fijo solo en dispositivos de escritorio */
+  }
+ /* Ajusta el margen automático y la anchura máxima para centrar la lista de imágenes */
+ .lista-imagenes ul {
+    margin: 0 auto; /* Margen automático horizontal para centrar */
+    max-width: 800px; /* Ancho máximo para la lista de imágenes */
+  }
+
+  .lista-imagenes li {
+    margin: 0 10px; /* Espacio entre las imágenes */
+  }
+  
+}
+
+/* Media query para estilos en dispositivos móviles */
+@media (max-width: 768px) {
+  .image-scroll-container {
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan en dispositivos móviles */
+    justify-content: center; /* Alinéalos a la izquierda */
+  }
+
+  .image-scroll-container img {
+    max-width: calc(100% - 20px); /* Ajusta el ancho de las imágenes en dispositivos móviles */
+    margin: 10px; /* Espacio entre las imágenes */
+  }
+  .imagen:hover .texto {
+    opacity: 1;
+  }  
+  .imagen:hover img {
+    transform: rotateY(180deg) scale(0.7); /* Gira la imagen y reduce su tamaño */
+  }
+  .container {
+        max-width: 100%; /* Ajustar el ancho al 100% en dispositivos móviles */
+    }
+
+    .section {
+    background-attachment: scroll; /* Permitir el scroll del fondo en dispositivos móviles */
+  }
+  .container {
+    padding: 20px; /* Añade espacio alrededor del botón en dispositivos móviles */
+
+    }
+  .lista-imagenes li {
+    margin: 0 5px; /* Reduzca el espacio entre las imágenes */
+  }          
+  .imagen img {
+  max-width: 100%; /* Asegura que las imágenes no se desborden fuera del contenedor */
+  max-height: auto; /* Asegura que las imágenes no se desborden fuera del contenedor */
+  }
+       
+}
+</style>
+
+
+</head>
+<body>
+  
+<header>
+  <h1>The Beard Barber</h1>
+  <img src="../assets/images/logo.png" alt="logo" height="100px" class="logo">
+  <nav>
+    <ul>
+        
+        <li><a href="../index.html">Inicio</a></li>
+        <li><a href="./workinpogress.html">Acerca de</a></li>
+        <li><a href="./workinpogress.html">Servicios</a></li>
+        <li><a href="./workinpogress.html">Contacto</a></li>
+        <li><a href="https://www.tiktok.com/@thebeardbarber?_t=8gFuW7dGOmG&_r=1"><img src="../assets/images/tiktoklogo.png" alt="tiktok" height="20px"></a></li>
+        <li><a href="https://www.instagram.com/thebeardbarber_/?utm_source=ig_web_button_share_sheet&igshid=ZDNlZDc0MzIxNw=="><img src="../assets/images/instagram-logo-png-transparent-background-1024x1024-1.png" alt="instagram" height="20"></a></li>
+    </ul>
+    <link rel="stylesheet" href="./estilos.css">
+</nav>
+</header>
+
+<hr>
+
+<div class="section">
+  <div class="video-container">
+  <video controls autoplay muted width="360" height="640" preload="auto" loop>
+  <source src="../assets/videos/video_oficial.mp4" type="video/mp4">
+
+  Tu navegador no admite la reproducción de vídeo.
+  </video>
+  </div> 
+
+  <div class="text-content">
+  <h3>¡Bienvenido a The Beard Barber!</h3>
+  <p>
+    En The Beard Barber, no solo cuidamos tu barba; cuidamos de ti. Somos más que una barbería, somos un destino para el hombre moderno que valora la calidad, la artesanía y el estilo impecable.
+      <br><br>
+    Nuestros maestros barberos están dedicados a ofrecerte una experiencia excepcional. Desde cortes de pelo clásicos hasta estilos vanguardistas y cuidado de la barba, nuestro equipo de profesionales se especializa en hacer que te sientas y luzcas tu mejor versión.
+    <br><br>
+  
+    En un ambiente relajado y acogedor, te invitamos a disfrutar de servicios personalizados que se adaptan a tu estilo y necesidades individuales. Ya sea que busques un afeitado suave como la seda, un corte de pelo con un toque contemporáneo o simplemente un lugar para relajarte y ponerte al día con las últimas tendencias masculinas, The Beard Barber es tu lugar de referencia en Moraña.
+    <br><br>
+    Nuestra pasión por el arte de la barbería se refleja en cada detalle, desde productos de alta calidad hasta técnicas de vanguardia. Aquí, la tradición se une con la innovación para ofrecerte resultados excepcionales.
+    <br><br>
+    Explora nuestra gama de servicios y reserva tu cita hoy mismo. Descubre por qué somos la elección preferida de los hombres que buscan lo mejor en cuidado personal.
+    <br><br>
+    ¡Esperamos verte pronto y ayudarte a lucir y sentirte impecable!
+  </p>
+  </div>
+</div>
+
+<hr>
+
+<!-- /* servicios */ -->
+
+<div class="section">
+  <h2>Servicios</h2>
+  <div class="image-scroll-container">
+    <ul class="lista-imagenes">
+      <li>
+        <div class="imagen">
+          <img src="../assets/images/corteadulto.jpeg" alt="Imagen corte adulto" >
+          <div class="texto">
+              <ul>
+                <li><b>Corte caballero:</b> Corte pelo clásico y elegante.</li>
+                <br>
+                <li><b>Corte niño:</b> Cortes diseñados específicamente para niños.</li>
+                <br>
+                <li><b>Corte máquina:</b> Corte uniforme  al mismo número de longitud.</li>
+              </ul>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="imagen">
+          <img src="../assets/images/afeitado.jpeg" alt="afeitado">
+          <div class="texto">
+            <ul>
+              <li><b>Perfilado de barba:</b> Forma y estilo profesional.</li>
+              <br>
+              <li><b>Rebaje/Diseño de barba:</b> Reducción o diseño específico.</li>
+              <br>
+              <li><b>Afeitado cara shaver:</b> Afeitado preciso y limpio con shaver.</li>
+            </ul>
+          </div>
+        </div>
+      </li>
+    
+      <li>
+        <div class="imagen">
+          <img src="../assets/images/cortelargo.jpeg" alt="tijeras">
+          <div class="texto">
+            <ul>
+              <li><b>Corte de cabello largo para hombres:</b> <br> Estilo y actitud para tu melena.</li>
+            </ul>
+          </div>
+        </div>
+      </li>
+    
+    </ul>
+  </div>
+
+
+
+
+  <div class="container">
+  <link href="https://calendar.google.com/calendar/scheduling-button-script.css" rel="stylesheet">
+  <script src="https://calendar.google.com/calendar/scheduling-button-script.js" async></script>
+  <script>
+  (function() {
+    var target = document.currentScript;
+    window.addEventListener('load', function() {
+     calendar.schedulingButton.load({
+      url: 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ0b9uhnT5t3-G-Hp73Vqy1wH-ux5FpYZSXcT7gFNcFn2MIC-KMC2PpIZ9xz8nD-OYaJ7v10EfkX?gv=true',
+      color: '#333',
+      label: 'Reserva tu cita',
+      target,
+      
+      });
+    });
+  })();
+  </script>
+    <!-- end Google Calendar Appointment Scheduling -->
+
+    </form>
+    
+  </div>
+</div>
+</div>
+<hr>
+<!-- Productos -->
+
+  <div class="section">
+    <h2>Productos</h2>
+    <div class="image-scroll-container">
+    <ul class="lista-imagenes">
+    
+    
+      <li>
+        <div class="imagen">
+          <img src="../assets/images/ceragorila.jpeg" alt="cera gorila">
+          <div class="texto">Slick Gorilla Clay Pomeda - <br>Experimenta una revolución en el cuidado capilar masculino <br> con Lightwork,<br> la arcilla que agrega dimensión y cuerpo sin peso. <br>Su acabado mate proporciona un estilo nítido y versátil</div>
+        </div>
+      </li>
+      <li>
+        <div class="imagen">
+          <img src="../assets/images/cerasuppercut.jpeg" alt="cera uppercut">
+          <div class="texto">Uppercut Deluxe - Cera de Peinado Monster Hold: <br> Experimenta una fijación extrema con esta cera de peinado. <br>Mantén tu estilo audaz durante todo el día con facilidad. <br> Consigue un look fresco y duradero con un toque de rebeldía.</div>
+        </div>
+      </li>
+      <li>
+        <div class="imagen">
+          <img src="../assets/images/polvouppercut.jpeg" alt="polvos uppercut">
+          <div class="texto">Uppercut Deluxe Styling Powder - <br> Eleva tu estilo al siguiente nivel. <br>Este polvo de peinado de Uppercut Deluxe agrega volumen y <br> textura con un toque mate. <br> Logra un peinado de aspecto fresco y sin esfuerzo en segundos.</div>
+        </div>
+      </li>
+      <li>
+        <div class="imagen">
+          <img src="../assets/images/producto1.jpeg" alt="suavecito shavegel">
+          <div class="texto">Suavecito Shave Gel - <br> Disfruta de un afeitado suave y sin complicaciones <br> con este gel de afeitar. <br> Su fórmula especial proporciona un deslizamiento y <br> una protección superior para tu piel, <br> dejándola fresca y revitalizada. Experimenta un afeitado de calidad <br>con facilidad y comodidad.</div>
+        </div>
+      </li>
+    
+    </ul>
+  </div>  
+  <p>Consultad la disponibilidad de los poductos en barbería.</p>
+  </div>
+
+</div>
+
+
+
+<hr>
+
+<!-- ubicacion y contacto -->
+<div class="section">
+  <div class="iframe-container">
+  <h2>Ubicación y contacto</h2>
+  <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11749.547488809429!2d-8.5903415!3d42.5895347!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd2f0d0ddd93e9a3%3A0xf17fa786a45f6a36!2sThe%20Beard%20Barber!5e0!3m2!1ses!2ses!4v1696335787937!5m2!1ses!2ses" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  <p>Contacto: <a href="tel:+34604047491">604 047 491 </a></p> 
+  </div>
+</div>
+
+
+
+
+<div class="banner">
+  <!-- Contenido de tu banner aquí -->
+  <p>Beta version</p>
+</div>
+</body>
+</html>
