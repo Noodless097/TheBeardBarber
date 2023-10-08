@@ -1,118 +1,100 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Peluquería Citas</title>
-<style>
-  body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-  }
-  header {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 1rem;
-  }
-  .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 2rem;
-  }
-  h1 {
-    text-align: center;
-    margin-bottom: 2rem;
-  }
-  .booking-form {
-    background-color: #fff;
-    border-radius: 8px;
-    padding: 2rem;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-  label {
-    display: block;
-    margin-bottom: 0.5rem;
-  }
-  input[type="text"],
-  input[type="email"],
-  select,
-  textarea {
-    width: 100%;
-    padding: 0.5rem;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    margin-bottom: 1rem;
-  }
-  button {
-    background-color: #333;
-    color: #fff;
-    padding: 0.5rem 1rem;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Inicio</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url('./assets/images/suso_fondo.jpeg'); /* Reemplaza 'tu-imagen-de-fondo.jpg' con la URL de tu imagen de fondo */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            font-family: Arial, sans-serif;
+            overflow-x: hidden; /* Agrega esta línea */
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Establece el alto del contenedor al 100% de la ventana */
+        }
+
+        .button {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            font-size: 18px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+         /* Media query para dispositivos móviles */
+         @media (max-width: 768px) {
+            .container {
+                padding: 20px; /* Añade espacio alrededor del botón en dispositivos móviles */
+            }
+        }
+
+        header {
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        padding: 1rem;
+        }
+        .logo {
+            float: left; 
+            margin-right: 20px; 
+            position: absolute;
+            top: 50%; /* Centra verticalmente */
+            left: 100px;
+            transform: translateY(-50%); /* Centra verticalmente el logo */
+    
+        }
+        .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 2rem;
+        }
+        h1 {
+        text-align: center;
+        margin-bottom: 2rem;
+        }
+
+        
+    </style>
+    
+    
 </head>
 <body>
-<header>
-  <h1>The Beard Barber</h1>
-</header>
-<div class="container">
-  <h2>Reserva tu cita</h2>
-  <!-- <div class="booking-form">
-    <form>
-      <label for="name">Nombre:</label>
-      <input type="text" id="name" name="name" required>
+    <header>
+        <h1>The Beard Barber</h1>
+        <img src="./assets/images/logo.png" alt="" height="100px" class="logo"> 
+        <nav>
+          <ul>
+              <li><a href="./index.html">Inicio</a></li>
+              <li><a href="./public/workinpogress.html">Acerca de</a></li>
+              <li><a href="./public/workinpogress.html">Servicios</a></li>
+              <li><a href="./public/workinpogress.html">Contacto</a></li>
+              <li><a href="https://www.tiktok.com/@thebeardbarber?_t=8gFuW7dGOmG&_r=1"><img src="./assets/images/tiktoklogo.png" alt="tiktok" height="20px"></a></li>
+                <li><a href="https://www.instagram.com/thebeardbarber_/?utm_source=ig_web_button_share_sheet&igshid=ZDNlZDc0MzIxNw=="><img src="./assets/images/instagram-logo-png-transparent-background-1024x1024-1.png" alt="instagram" height="20"></a></li>
+          </ul>
+          <link rel="stylesheet" href="./public/estilos.css">
+      </nav>
+      </header>
+    <div class="container">
+        <a href="./public/main.html"><button class="button">Comenzar</button></a>
+    </div>
 
-      <label for="email">Correo electrónico:</label>
-      <input type="email" id="email" name="email" required>
+    <div class="banner">
+        <!-- Contenido de tu banner aquí -->
+        <p>Beta version</p>
+      </div>
 
-      <label for="service">Servicio:</label>
-      <select id="service" name="service" required>
-        <option value="corte">Corte de pelo 10€</option>
-        <option value="color">Corte y Barba 15€</option>
-        <option value="peinado">Peinado 7.5€</option>
-      </select>
-
-      <label for="fecha">Fecha:</label>
-      <input type="date" id="fecha" name="fecha">
-      <br>
-      <label for="hora">Hora:</label>
-      <input type="time" id="hora" name="hora">
-      <br>
-      
-
-      <label for="comments">Comentarios adicionales:</label>
-      <textarea id="comments" name="comments" rows="4"></textarea> -->
-
-      <!-- <button id="reservar">Reservar cita</button>
-        <a href="https://calendar.app.google/XKcLehDnPP7ee4w98"></a>
-        <script src="https://apis.google.com/js/api.js"></script>
-        <script src="app.js"></script> -->
-        <!-- Google Calendar Appointment Scheduling begin -->
-<link href="https://calendar.google.com/calendar/scheduling-button-script.css" rel="stylesheet">
-<script src="https://calendar.google.com/calendar/scheduling-button-script.js" async></script>
-<script>
-(function() {
-  var target = document.currentScript;
-  window.addEventListener('load', function() {
-    calendar.schedulingButton.load({
-      url: 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ0b9uhnT5t3-G-Hp73Vqy1wH-ux5FpYZSXcT7gFNcFn2MIC-KMC2PpIZ9xz8nD-OYaJ7v10EfkX?gv=true',
-      color: '#039BE5',
-      label: 'Reservar una cita',
-      target,
-    });
-  });
-})();
-</script>
-<!-- end Google Calendar Appointment Scheduling -->
-
-    </form>
-    
-  </div>
-</div>
 </body>
+
 </html>
